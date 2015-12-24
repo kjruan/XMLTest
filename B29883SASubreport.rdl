@@ -1,0 +1,2663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="table1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>0.275in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.63542in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.94792in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.25in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.22998in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox28">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox28</rd:DefaultName>
+                      <Style>
+                        <Border />
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox11">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox95">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value EvaluationMode="Constant">Beginning Market Value</Value>
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                            <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                            <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox95</rd:DefaultName>
+                      <ToolTip>SectionSubtotal</ToolTip>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                        <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                        <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                        <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                        <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="BMV">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=IIF(SUM(Fields!PeriodicTWR.Value) = 200000, SUM(Fields!BeginningMarketValue.Value), IIF(SUM(Fields!PeriodicTWR.Value) = 100000, "-", SUM(Fields!BeginningMarketValue.Value)))</Value>
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                                <Format>#,0.00</Format>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                            <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                            <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>BMV</rd:DefaultName>
+                      <ToolTip>SectionSubtotal</ToolTip>
+                      <Style>
+                        <Border />
+                        <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                        <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                        <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                        <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                        <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.22998in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox29">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox29</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>#cccccc</Color>
+                          <Style>None</Style>
+                          <Width>0.01in</Width>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox12">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox12</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox98">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Net Contributions/Withdrawals</Value>
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                            <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                            <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox97</rd:DefaultName>
+                      <ToolTip>SectionSubtotal</ToolTip>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                        <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                        <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                        <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                        <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="NetAdditionsAndWithDrawals">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=IIF(SUM(Fields!PeriodicTWR.Value) = 200000, SUM(Fields!NetAdditionsAndWithDrawals.Value), IIF(SUM(Fields!PeriodicTWR.Value) = 100000, "-", SUM(Fields!NetAdditionsAndWithDrawals.Value)))</Value>
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                                <Format>#,0.00</Format>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                            <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                            <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>NetAdditionsAndWithDrawals</rd:DefaultName>
+                      <ToolTip>SectionSubtotal</ToolTip>
+                      <Style>
+                        <Border />
+                        <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                        <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                        <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                        <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                        <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.21885in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox30">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox30</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>None</Style>
+                          <Width>0.01in</Width>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox13">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox13</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox99">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value EvaluationMode="Constant">Net Investment</Value>
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                            <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                            <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox99</rd:DefaultName>
+                      <ToolTip>SectionSubtotal</ToolTip>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                        <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                        <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                        <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                        <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox52">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=IIF(SUM(Fields!PeriodicTWR.Value) = 200000, SUM(Fields!BeginningMarketValue.Value) + SUM(Fields!NetAdditionsAndWithDrawals.Value), IIF(SUM(Fields!PeriodicTWR.Value) = 100000, "-", SUM(Fields!BeginningMarketValue.Value) + SUM(Fields!NetAdditionsAndWithDrawals.Value)))</Value>
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                                <Format>#,0.00</Format>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                            <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                            <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox52</rd:DefaultName>
+                      <ToolTip>SectionSubtotal</ToolTip>
+                      <Style>
+                        <Border />
+                        <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                        <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                        <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                        <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                        <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.21956in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox31">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox31</rd:DefaultName>
+                      <Style>
+                        <Border />
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox14">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox14</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox106">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value EvaluationMode="Constant">Ending Market Value</Value>
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                            <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                            <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox106</rd:DefaultName>
+                      <ToolTip>SectionSubtotal</ToolTip>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                        <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                        <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                        <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                        <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="EndingMarketValue">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=IIF(SUM(Fields!PeriodicTWR.Value) = 200000, Fields!EndingMarketValue.Value, IIF(SUM(Fields!PeriodicTWR.Value) = 100000, "-", Fields!EndingMarketValue.Value))</Value>
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                                <Format>#,0.00</Format>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                            <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                            <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>EndingMarketValue</rd:DefaultName>
+                      <ToolTip>SectionSubtotal</ToolTip>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                        <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionSubtotal")</FontStyle>
+                        <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionSubtotal")</FontFamily>
+                        <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionSubtotal")</FontSize>
+                        <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionSubtotal")</FontWeight>
+                        <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionSubtotal")</TextDecoration>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                    <rd:Selected>true</rd:Selected>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.12468in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox32">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox32</rd:DefaultName>
+                      <Style>
+                        <Border />
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox15">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox15</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox168">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox168</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox151">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <Format>#,0.00</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox151</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>#cccccc</Color>
+                          <Style>None</Style>
+                          <Width>0.01in</Width>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.22998in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox34">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox34</rd:DefaultName>
+                      <Style>
+                        <Border />
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox16">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetGrandTotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetGrandTotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetGrandTotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetGrandTotal")</FontWeight>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetGrandTotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox108">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Time Weighted Return*</Value>
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetGrandTotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetGrandTotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetGrandTotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetGrandTotal")</FontWeight>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetGrandTotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetGrandTotal")</FontStyle>
+                            <FontFamily>=First(Fields!FontName.Value, "StyleSheetGrandTotal")</FontFamily>
+                            <FontSize>=First(Fields!FontSize.Value, "StyleSheetGrandTotal")</FontSize>
+                            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetGrandTotal")</FontWeight>
+                            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetGrandTotal")</TextDecoration>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox108</rd:DefaultName>
+                      <ToolTip>GrandTotal</ToolTip>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>LightSteelBlue</BackgroundColor>
+                        <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetGrandTotal")</FontStyle>
+                        <FontFamily>=First(Fields!FontName.Value, "StyleSheetGrandTotal")</FontFamily>
+                        <FontSize>=First(Fields!FontSize.Value, "StyleSheetGrandTotal")</FontSize>
+                        <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetGrandTotal")</FontWeight>
+                        <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetGrandTotal")</TextDecoration>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="PeriodicTWR">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=IIF(SUM(Fields!PeriodicTWR.Value) = 200000, 0, IIF(SUM(Fields!PeriodicTWR.Value) = 100000, nothing, SUM(Fields!PeriodicTWR.Value)))</Value>
+                              <Style>
+                                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetGrandTotal")</FontStyle>
+                                <FontFamily>=First(Fields!FontName.Value, "StyleSheetGrandTotal")</FontFamily>
+                                <FontSize>=First(Fields!FontSize.Value, "StyleSheetGrandTotal")</FontSize>
+                                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetGrandTotal")</FontWeight>
+                                <Format>#,0.00</Format>
+                                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetGrandTotal")</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetGrandTotal")</FontStyle>
+                            <FontFamily>=First(Fields!FontName.Value, "StyleSheetGrandTotal")</FontFamily>
+                            <FontSize>=First(Fields!FontSize.Value, "StyleSheetGrandTotal")</FontSize>
+                            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetGrandTotal")</FontWeight>
+                            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetGrandTotal")</TextDecoration>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>PeriodicTWR</rd:DefaultName>
+                      <ToolTip>GrandTotal</ToolTip>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>LightBlue</Color>
+                        </LeftBorder>
+                        <BackgroundColor>LightSteelBlue</BackgroundColor>
+                        <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetGrandTotal")</FontStyle>
+                        <FontFamily>=First(Fields!FontName.Value, "StyleSheetGrandTotal")</FontFamily>
+                        <FontSize>=First(Fields!FontSize.Value, "StyleSheetGrandTotal")</FontSize>
+                        <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetGrandTotal")</FontWeight>
+                        <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetGrandTotal")</TextDecoration>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.07037in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox35">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox35</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>#cccccc</Color>
+                          <Style>None</Style>
+                          <Width>0.01in</Width>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox17">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox17</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>#cccccc</Color>
+                          <Style>None</Style>
+                          <Width>0.01in</Width>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox165">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox165</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>#cccccc</Color>
+                          <Style>None</Style>
+                          <Width>0.01in</Width>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox164">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox164</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>#cccccc</Color>
+                          <Style>None</Style>
+                          <Width>0.01in</Width>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <TablixHeader>
+                <Size>0.25in</Size>
+                <CellContents>
+                  <Textbox Name="Textbox147">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value EvaluationMode="Constant">Portfolio Activity/Performance</Value>
+                            <Style>
+                              <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionHeader")</FontStyle>
+                              <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionHeader")</FontFamily>
+                              <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionHeader")</FontSize>
+                              <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionHeader")</FontWeight>
+                              <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionHeader")</TextDecoration>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionHeader")</FontStyle>
+                          <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionHeader")</FontFamily>
+                          <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionHeader")</FontSize>
+                          <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionHeader")</FontWeight>
+                          <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionHeader")</TextDecoration>
+                          <TextAlign>Left</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Textbox146</rd:DefaultName>
+                    <ToolTip>SectionHeader</ToolTip>
+                    <Style>
+                      <Border />
+                      <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionHeader")</FontStyle>
+                      <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionHeader")</FontFamily>
+                      <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionHeader")</FontSize>
+                      <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionHeader")</FontWeight>
+                      <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionHeader")</TextDecoration>
+                      <VerticalAlign>Bottom</VerticalAlign>
+                      <PaddingRight>2pt</PaddingRight>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <TablixMembers>
+                <TablixMember>
+                  <TablixHeader>
+                    <Size>0.25in</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox135">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value />
+                                <Style />
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Left</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox135</rd:DefaultName>
+                        <Style>
+                          <Border />
+                          <VerticalAlign>Bottom</VerticalAlign>
+                          <PaddingRight>2pt</PaddingRight>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixMember>
+                <TablixMember>
+                  <TablixHeader>
+                    <Size>0.25in</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox10">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value />
+                                <Style />
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Left</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox10</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Style>None</Style>
+                          </Border>
+                          <VerticalAlign>Bottom</VerticalAlign>
+                          <PaddingRight>2pt</PaddingRight>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                </TablixMember>
+                <TablixMember>
+                  <TablixHeader>
+                    <Size>0.25in</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox137">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value />
+                                <Style />
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Left</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox135</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Style>None</Style>
+                          </Border>
+                          <BottomBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>0.01in</Width>
+                          </BottomBorder>
+                          <VerticalAlign>Bottom</VerticalAlign>
+                          <PaddingRight>2pt</PaddingRight>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Period">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!TimeFrame.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=SWITCH(Fields!TimeFrame.Value = "MTD", 1, Fields!TimeFrame.Value = "QTD" , 2, Fields!TimeFrame.Value = "YTD", 3, Fields!TimeFrame.Value = "L1Y", 4, Fields!TimeFrame.Value = "L5Y", 5, Fields!TimeFrame.Value = "ITD",6)</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>0.25in</Size>
+                    <CellContents>
+                      <Textbox Name="TimeFrame">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=SWITCH(Fields!TimeFrame.Value = "MTD", "Month To Date", Fields!TimeFrame.Value = "QTD" , "Quarter To Date", Fields!TimeFrame.Value = "YTD", "Year To Date",Fields!TimeFrame.Value = "ITD","Inception To Date", Fields!TimeFrame.Value = "L1Y", "Latest 1 Year", Fields!TimeFrame.Value = "L5Y", "Latest 5 Years")</Value>
+                                <Style>
+                                  <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetColumnHeader")</FontStyle>
+                                  <FontFamily>=First(Fields!FontName.Value, "StyleSheetColumnHeader")</FontFamily>
+                                  <FontSize>=First(Fields!FontSize.Value, "StyleSheetColumnHeader")</FontSize>
+                                  <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetColumnHeader")</FontWeight>
+                                  <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetColumnHeader")</TextDecoration>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetColumnHeader")</FontStyle>
+                              <FontFamily>=First(Fields!FontName.Value, "StyleSheetColumnHeader")</FontFamily>
+                              <FontSize>=First(Fields!FontSize.Value, "StyleSheetColumnHeader")</FontSize>
+                              <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetColumnHeader")</FontWeight>
+                              <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetColumnHeader")</TextDecoration>
+                              <TextAlign>Right</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>TimeFrame</rd:DefaultName>
+                        <ToolTip>ColumnHeader</ToolTip>
+                        <Style>
+                          <Border>
+                            <Style>None</Style>
+                            <Width>0.75pt</Width>
+                          </Border>
+                          <BottomBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                          </BottomBorder>
+                          <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetColumnHeader")</FontStyle>
+                          <FontFamily>=First(Fields!FontName.Value, "StyleSheetColumnHeader")</FontFamily>
+                          <FontSize>=First(Fields!FontSize.Value, "StyleSheetColumnHeader")</FontSize>
+                          <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetColumnHeader")</FontWeight>
+                          <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetColumnHeader")</TextDecoration>
+                          <VerticalAlign>Bottom</VerticalAlign>
+                          <PaddingRight>2pt</PaddingRight>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <NoRowsMessage>No Data Avilable</NoRowsMessage>
+        <DataSetName>PerformanceActivityAndCharting</DataSetName>
+        <Filters>
+          <Filter>
+            <FilterExpression>=Fields!TableType.Value</FilterExpression>
+            <Operator>Equal</Operator>
+            <FilterValues>
+              <FilterValue>Tabular</FilterValue>
+            </FilterValues>
+          </Filter>
+        </Filters>
+        <Height>1.8234in</Height>
+        <Width>4.10834in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Rectangle Name="Rectangle2">
+        <ReportItems>
+          <Textbox Name="Textbox152">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Performance Since Inception (" &amp; First(Fields!PeriodThruDate.Value, "PerformanceActivityAndCharting") &amp; ")"</Value>
+                    <Style>
+                      <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionHeader")</FontStyle>
+                      <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionHeader")</FontFamily>
+                      <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionHeader")</FontSize>
+                      <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionHeader")</FontWeight>
+                      <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionHeader")</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionHeader")</FontStyle>
+                  <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionHeader")</FontFamily>
+                  <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionHeader")</FontSize>
+                  <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionHeader")</FontWeight>
+                  <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionHeader")</TextDecoration>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox42</rd:DefaultName>
+            <Height>0.26346in</Height>
+            <Width>7.5in</Width>
+            <ToolTip>SectionHeader</ToolTip>
+            <Style>
+              <Border />
+              <BackgroundColor>White</BackgroundColor>
+              <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionHeader")</FontStyle>
+              <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionHeader")</FontFamily>
+              <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionHeader")</FontSize>
+              <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionHeader")</FontWeight>
+              <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionHeader")</TextDecoration>
+              <VerticalAlign>Bottom</VerticalAlign>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Chart Name="chart_TWR">
+            <ChartCategoryHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart8_CategoryGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!PeriodThruDate.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!PeriodThruDate.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=IIF(Month(Fields!PeriodThruDate.Value) = 12, YEAR(Fields!PeriodThruDate.Value).ToString, nothing)</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartCategoryHierarchy>
+            <ChartSeriesHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Label>Periodic TWR</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartSeriesHierarchy>
+            <ChartData>
+              <ChartSeriesCollection>
+                <ChartSeries Name="TWR">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Sum(Fields!PeriodicTWR.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                        <UseValueAsLabel>true</UseValueAsLabel>
+                      </ChartDataLabel>
+                      <Style>
+                        <Border>
+                          <Width>1.5pt</Width>
+                        </Border>
+                        <Color>SteelBlue</Color>
+                      </Style>
+                      <ChartMarker>
+                        <Size>1pt</Size>
+                        <Style>
+                          <Color>MidnightBlue</Color>
+                        </Style>
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Type>Line</Type>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+              </ChartSeriesCollection>
+            </ChartData>
+            <ChartAreas>
+              <ChartArea Name="Default">
+                <ChartCategoryAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <FontSize>6pt</FontSize>
+                      <Format>yyyy</Format>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <Margin>False</Margin>
+                    <Interval>1</Interval>
+                    <LabelInterval>1</LabelInterval>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMinorTickMarks>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <AllowLabelRotation>None</AllowLabelRotation>
+                    <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
+                    <OffsetLabels>true</OffsetLabels>
+                    <HideEndLabels>true</HideEndLabels>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption>Axis Title</Caption>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMinorTickMarks>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartCategoryAxes>
+                <ChartValueAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <Format>#,0.0</Format>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption>Time Weighted Return</Caption>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMinorTickMarks>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption>TWR</Caption>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMinorTickMarks>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartValueAxes>
+                <ChartThreeDProperties>
+                  <Shading>None</Shading>
+                </ChartThreeDProperties>
+                <Style />
+              </ChartArea>
+            </ChartAreas>
+            <Palette>Excel</Palette>
+            <ChartBorderSkin>
+              <Style>
+                <BackgroundColor>Gray</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <Color>White</Color>
+              </Style>
+            </ChartBorderSkin>
+            <ChartNoDataMessage Name="NoDataMessage">
+              <Caption>No Data Available</Caption>
+              <Style>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <TextAlign>General</TextAlign>
+                <VerticalAlign>Top</VerticalAlign>
+              </Style>
+            </ChartNoDataMessage>
+            <DataSetName>PerformanceActivityAndCharting</DataSetName>
+            <Filters>
+              <Filter>
+                <FilterExpression>=Fields!TableType.Value</FilterExpression>
+                <Operator>NotEqual</Operator>
+                <FilterValues>
+                  <FilterValue>Tabular</FilterValue>
+                </FilterValues>
+              </Filter>
+            </Filters>
+            <Top>0.30513in</Top>
+            <Height>2.81698in</Height>
+            <Width>7.5in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Color>White</Color>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </Chart>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>1.89284in</Top>
+        <Height>3.12211in</Height>
+        <Width>7.5in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="Rectangle3">
+        <ReportItems>
+          <Chart Name="chart_EMV_CW">
+            <ChartCategoryHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart4_CategoryGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!PeriodThruDate.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!PeriodThruDate.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=IIF(Month(Fields!PeriodThruDate.Value) = 12, YEAR(Fields!PeriodThruDate.Value).ToString, nothing)</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartCategoryHierarchy>
+            <ChartSeriesHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Label>Ending Market Value</Label>
+                </ChartMember>
+                <ChartMember>
+                  <Label>Net Additions And With Drawals</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartSeriesHierarchy>
+            <ChartData>
+              <ChartSeriesCollection>
+                <ChartSeries Name="EMV">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Fields!EndingMarketValue.Value</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                        <UseValueAsLabel>true</UseValueAsLabel>
+                      </ChartDataLabel>
+                      <Style>
+                        <Border>
+                          <Style>Dotted</Style>
+                          <Width>3pt</Width>
+                        </Border>
+                      </Style>
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Type>Line</Type>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+                <ChartSeries Name="NetAdditionandWithdrawal">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Sum(Fields!NetAdditionsAndWithDrawals.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                        <UseValueAsLabel>true</UseValueAsLabel>
+                      </ChartDataLabel>
+                      <Style>
+                        <Border>
+                          <Width>1.5pt</Width>
+                        </Border>
+                      </Style>
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Type>Line</Type>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <ChartItemInLegend>
+                    <LegendText>Net Contributions &amp; Withdrawals</LegendText>
+                  </ChartItemInLegend>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+              </ChartSeriesCollection>
+            </ChartData>
+            <ChartAreas>
+              <ChartArea Name="Default">
+                <ChartCategoryAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <FontSize>6pt</FontSize>
+                      <Format>yyyy</Format>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <Margin>False</Margin>
+                    <Interval>1</Interval>
+                    <LabelInterval>1</LabelInterval>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMinorTickMarks>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <AllowLabelRotation>None</AllowLabelRotation>
+                    <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
+                    <OffsetLabels>true</OffsetLabels>
+                    <HideEndLabels>true</HideEndLabels>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption>Axis Title</Caption>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMinorTickMarks>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartCategoryAxes>
+                <ChartValueAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <Format>#,0</Format>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption>Amount</Caption>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMinorTickMarks>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption>Axis Title</Caption>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMinorTickMarks>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartValueAxes>
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                </Style>
+              </ChartArea>
+            </ChartAreas>
+            <ChartLegends>
+              <ChartLegend Name="Default">
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <FontSize>7pt</FontSize>
+                </Style>
+                <Position>BottomCenter</Position>
+                <DockToChartArea>Default</DockToChartArea>
+                <DockOutsideChartArea>true</DockOutsideChartArea>
+                <ChartLegendTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </ChartLegendTitle>
+                <AutoFitTextDisabled>true</AutoFitTextDisabled>
+                <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+                <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+              </ChartLegend>
+            </ChartLegends>
+            <Palette>BrightPastel</Palette>
+            <ChartBorderSkin>
+              <Style>
+                <BackgroundColor>Gray</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <Color>White</Color>
+              </Style>
+            </ChartBorderSkin>
+            <ChartNoDataMessage Name="NoDataMessage">
+              <Caption>No Data Available</Caption>
+              <Style>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <TextAlign>General</TextAlign>
+                <VerticalAlign>Top</VerticalAlign>
+              </Style>
+            </ChartNoDataMessage>
+            <DataSetName>PerformanceActivityAndCharting</DataSetName>
+            <Filters>
+              <Filter>
+                <FilterExpression>=Fields!TableType.Value</FilterExpression>
+                <Operator>NotEqual</Operator>
+                <FilterValues>
+                  <FilterValue>Tabular</FilterValue>
+                </FilterValues>
+              </Filter>
+            </Filters>
+            <Top>0.34843in</Top>
+            <Height>2.56597in</Height>
+            <Width>7.5in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </Chart>
+          <Textbox Name="Textbox157">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Net Contribution vs. Market Value Since Inception (" &amp; First(Fields!PeriodThruDate.Value, "PerformanceActivityAndCharting") &amp; ")"</Value>
+                    <Style>
+                      <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionHeader")</FontStyle>
+                      <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionHeader")</FontFamily>
+                      <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionHeader")</FontSize>
+                      <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionHeader")</FontWeight>
+                      <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionHeader")</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionHeader")</FontStyle>
+                  <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionHeader")</FontFamily>
+                  <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionHeader")</FontSize>
+                  <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionHeader")</FontWeight>
+                  <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionHeader")</TextDecoration>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox42</rd:DefaultName>
+            <Height>0.27899in</Height>
+            <Width>7.5in</Width>
+            <ZIndex>1</ZIndex>
+            <ToolTip>SectionHeader</ToolTip>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+              <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetSectionHeader")</FontStyle>
+              <FontFamily>=First(Fields!FontName.Value, "StyleSheetSectionHeader")</FontFamily>
+              <FontSize>=First(Fields!FontSize.Value, "StyleSheetSectionHeader")</FontSize>
+              <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetSectionHeader")</FontWeight>
+              <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetSectionHeader")</TextDecoration>
+              <VerticalAlign>Bottom</VerticalAlign>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>5.01495in</Top>
+        <Height>2.9144in</Height>
+        <Width>7.5in</Width>
+        <ZIndex>2</ZIndex>
+        <Visibility>
+          <Hidden>=IIF(Parameters!SuppressLastChart.Value = True , True, False)</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+    </ReportItems>
+    <Height>7.92935in</Height>
+    <Style />
+  </Body>
+  <Width>7.5in</Width>
+  <Page>
+    <PageHeight>10in</PageHeight>
+    <PageWidth>7.5in</PageWidth>
+    <InteractiveHeight>10in</InteractiveHeight>
+    <InteractiveWidth>7.5in</InteractiveWidth>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="APXFirm">
+      <DataSourceReference>APXFirm</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>ad878c47-b1b9-4851-a9c0-9775ee680037</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="PerformanceActivityAndCharting">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DataHandle">
+            <Value>=Parameters!DataHandle.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PortfolioBaseID">
+            <Value>=Parameters!PortfolioBaseID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@ToDate">
+            <Value>=Parameters!ToDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PortfolioBaseCode">
+            <Value>=Parameters!PortfolioBaseCode.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PortfolioBaseIDOrder">
+            <Value>=Parameters!PortfolioBaseIDOrder.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@TimeFrameList">
+            <Value>=Parameters!TimeFrameList.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Frequency">
+            <Value>=Parameters!Frequency.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@ClassificationID">
+            <Value>=Parameters!ClassificationID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@BMV">
+            <Value>=Parameters!BMV.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>APXUserCustom.pB29883SADataHandle </CommandText>
+      </Query>
+      <Fields>
+        <Field Name="PortfolioBaseID">
+          <DataField>PortfolioBaseID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PortfolioBaseIDOrder">
+          <DataField>PortfolioBaseIDOrder</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ClassificationMemberCode">
+          <DataField>ClassificationMemberCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ClassificationMemberOrder">
+          <DataField>ClassificationMemberOrder</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ClassificationMemberName">
+          <DataField>ClassificationMemberName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PeriodicTWR">
+          <DataField>PeriodicTWR</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EndingMarketValue">
+          <DataField>EndingMarketValue</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="NetAdditionsAndWithDrawals">
+          <DataField>NetAdditionsAndWithdrawals</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="BeginningMarketValue">
+          <DataField>BeginningMarketValue</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PeriodFromDate">
+          <DataField>PeriodFromDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PeriodThruDate">
+          <DataField>PeriodThruDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TableType">
+          <DataField>TableType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TimeFrame">
+          <DataField>TimeFrame</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsPerformanceTWR">
+          <DataField>IsPerformanceTWR</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="GroupingCriteria">
+          <DataField>GroupingCriteria</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="StyleSheetSectionSubtotal">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSheet">
+            <Value>=Parameters!StyleSheet.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSetID">
+            <Value>=Parameters!StyleSetID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>exec APXUser.pSessionInfoSetGuid @SessionGuid Select * from APXUserCustom.vStyleSheet WHERE DisplayName = @StyleSheet and StyleSetID = @StyleSetID and ElementName = 'Section Subtotal'</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="StyleSheetID">
+          <DataField>StyleSheetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="StyleSheetName">
+          <DataField>StyleSheetName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StyleSetID">
+          <DataField>StyleSetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DisplayName">
+          <DataField>DisplayName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowFootnotes">
+          <DataField>ShowFootnotes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PageWidthInches">
+          <DataField>PageWidthInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PageHeightInches">
+          <DataField>PageHeightInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TopMarginInches">
+          <DataField>TopMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BottomMarginInches">
+          <DataField>BottomMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="LeftMarginInches">
+          <DataField>LeftMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="RightMarginInches">
+          <DataField>RightMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ElementName">
+          <DataField>ElementName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontName">
+          <DataField>FontName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontSize">
+          <DataField>FontSize</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyleOriginal">
+          <DataField>FontStyleOriginal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontWeight">
+          <DataField>FontWeight</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyle">
+          <DataField>FontStyle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TextDecoration">
+          <DataField>TextDecoration</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="StyleSheetGrandTotal">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSheet">
+            <Value>=Parameters!StyleSheet.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSetID">
+            <Value>=Parameters!StyleSetID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>exec APXUser.pSessionInfoSetGuid @SessionGuid Select * from APXUserCustom.vStyleSheet WHERE DisplayName = @StyleSheet and StyleSetID = @StyleSetID and ElementName = 'Grand Total'</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="StyleSheetID">
+          <DataField>StyleSheetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="StyleSheetName">
+          <DataField>StyleSheetName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StyleSetID">
+          <DataField>StyleSetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DisplayName">
+          <DataField>DisplayName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowFootnotes">
+          <DataField>ShowFootnotes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PageWidthInches">
+          <DataField>PageWidthInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PageHeightInches">
+          <DataField>PageHeightInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TopMarginInches">
+          <DataField>TopMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BottomMarginInches">
+          <DataField>BottomMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="LeftMarginInches">
+          <DataField>LeftMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="RightMarginInches">
+          <DataField>RightMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ElementName">
+          <DataField>ElementName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontName">
+          <DataField>FontName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontSize">
+          <DataField>FontSize</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyleOriginal">
+          <DataField>FontStyleOriginal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontWeight">
+          <DataField>FontWeight</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyle">
+          <DataField>FontStyle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TextDecoration">
+          <DataField>TextDecoration</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="StyleSheetSectionHeader">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSheet">
+            <Value>=Parameters!StyleSheet.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSetID">
+            <Value>=Parameters!StyleSetID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>exec APXUser.pSessionInfoSetGuid @SessionGuid Select * from APXUserCustom.vStyleSheet WHERE DisplayName = @StyleSheet and StyleSetID = @StyleSetID and ElementName = 'Section Header'</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="StyleSheetID">
+          <DataField>StyleSheetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="StyleSheetName">
+          <DataField>StyleSheetName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StyleSetID">
+          <DataField>StyleSetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DisplayName">
+          <DataField>DisplayName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowFootnotes">
+          <DataField>ShowFootnotes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PageWidthInches">
+          <DataField>PageWidthInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PageHeightInches">
+          <DataField>PageHeightInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TopMarginInches">
+          <DataField>TopMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BottomMarginInches">
+          <DataField>BottomMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="LeftMarginInches">
+          <DataField>LeftMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="RightMarginInches">
+          <DataField>RightMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ElementName">
+          <DataField>ElementName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontName">
+          <DataField>FontName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontSize">
+          <DataField>FontSize</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyleOriginal">
+          <DataField>FontStyleOriginal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontWeight">
+          <DataField>FontWeight</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyle">
+          <DataField>FontStyle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TextDecoration">
+          <DataField>TextDecoration</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="StyleSheetColumnHeader">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSheet">
+            <Value>=Parameters!StyleSheet.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSetID">
+            <Value>=Parameters!StyleSetID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>exec APXUser.pSessionInfoSetGuid @SessionGuid Select * from APXUserCustom.vStyleSheet WHERE DisplayName = @StyleSheet and StyleSetID = @StyleSetID and ElementName = 'Column Header'</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="StyleSheetID">
+          <DataField>StyleSheetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="StyleSheetName">
+          <DataField>StyleSheetName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StyleSetID">
+          <DataField>StyleSetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DisplayName">
+          <DataField>DisplayName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowFootnotes">
+          <DataField>ShowFootnotes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PageWidthInches">
+          <DataField>PageWidthInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PageHeightInches">
+          <DataField>PageHeightInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TopMarginInches">
+          <DataField>TopMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BottomMarginInches">
+          <DataField>BottomMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="LeftMarginInches">
+          <DataField>LeftMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="RightMarginInches">
+          <DataField>RightMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ElementName">
+          <DataField>ElementName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontName">
+          <DataField>FontName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontSize">
+          <DataField>FontSize</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyleOriginal">
+          <DataField>FontStyleOriginal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontWeight">
+          <DataField>FontWeight</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyle">
+          <DataField>FontStyle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TextDecoration">
+          <DataField>TextDecoration</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="SessionGuid">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>SessionGuid</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="DataHandle">
+      <DataType>String</DataType>
+      <Prompt>Data Handle</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PortfolioBaseID">
+      <DataType>Integer</DataType>
+      <Prompt>Portfolio Base ID</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PortfolioBaseCode">
+      <DataType>String</DataType>
+      <Prompt>Portfolio Base Code</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PortfolioBaseIDOrder">
+      <DataType>Integer</DataType>
+      <Prompt>Portfolio Base IDOrder</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ToDate">
+      <DataType>DateTime</DataType>
+      <Prompt>To Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TimeFrameList">
+      <DataType>String</DataType>
+      <Prompt>Time Frame List</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ClassificationID">
+      <DataType>Integer</DataType>
+      <Prompt>Classification ID</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Frequency">
+      <DataType>String</DataType>
+      <Prompt>Frequency</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BMV">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>BMV</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SuppressLastChart">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SuppressLastChart</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="StyleSetID">
+      <DataType>Integer</DataType>
+      <Prompt>StyleSetID</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="StyleSheet">
+      <DataType>String</DataType>
+      <Prompt>StyleSheet</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>9d76db1a-f7e9-4c4f-a357-8297d8c7bc62</rd:ReportID>
+</Report>

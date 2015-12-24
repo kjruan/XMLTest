@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.03875in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.14584in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.94666in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.36875in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.03125in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="ReportHeading3">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!ReportHeading3.Value</Value>
+                              <Style>
+                                <FontSize>1pt</FontSize>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="ReportHeading2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!ReportHeading2.Value</Value>
+                              <Style>
+                                <FontSize>1pt</FontSize>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="FirmLogo">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!FirmLogo.Value</Value>
+                              <Style>
+                                <FontSize>1pt</FontSize>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox5">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>1pt</FontSize>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>8.23625in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Subreport Name="B29883SASubreport">
+                      <ReportName>B29883SASubreport</ReportName>
+                      <Parameters>
+                        <Parameter Name="SessionGuid">
+                          <Value>=Parameters!SessionGuid.Value</Value>
+                        </Parameter>
+                        <Parameter Name="BMV">
+                          <Value>=Parameters!BMV.Value</Value>
+                        </Parameter>
+                        <Parameter Name="DataHandle">
+                          <Value>=Fields!DataHandle.Value</Value>
+                        </Parameter>
+                        <Parameter Name="PortfolioBaseID">
+                          <Value>=Fields!PortfolioBaseID.Value</Value>
+                        </Parameter>
+                        <Parameter Name="PortfolioBaseCode">
+                          <Value>=Fields!PortfolioBaseCode.Value</Value>
+                        </Parameter>
+                        <Parameter Name="PortfolioBaseIDOrder">
+                          <Value>=Fields!PortfolioBaseIDOrder.Value</Value>
+                        </Parameter>
+                        <Parameter Name="TimeFrameList">
+                          <Value>=Join(Parameters!TimeFrame.Value,",")&amp;","</Value>
+                        </Parameter>
+                        <Parameter Name="StyleSetID">
+                          <Value>=Parameters!StyleSetID.Value</Value>
+                        </Parameter>
+                        <Parameter Name="ToDate">
+                          <Value>=Parameters!ToDate.Value</Value>
+                        </Parameter>
+                        <Parameter Name="Frequency">
+                          <Value>=Parameters!Frequency.Value</Value>
+                        </Parameter>
+                        <Parameter Name="ClassificationID">
+                          <Value>=Parameters!ClassificationID.Value</Value>
+                        </Parameter>
+                        <Parameter Name="SuppressLastChart">
+                          <Value>=Parameters!SuppressLastChart.Value</Value>
+                        </Parameter>
+                        <Parameter Name="StyleSheet">
+                          <Value>=Parameters!StyleSheet.Value</Value>
+                        </Parameter>
+                      </Parameters>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Subreport>
+                    <ColSpan>4</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Details">
+                <PageBreak>
+                  <BreakLocation>Between</BreakLocation>
+                </PageBreak>
+              </Group>
+              <TablixMembers>
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember />
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>PortfoliosPerf</DataSetName>
+        <Height>8.2675in</Height>
+        <Width>7.5in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>8.2675in</Height>
+    <Style />
+  </Body>
+  <Width>7.5in</Width>
+  <Page>
+    <PageHeader>
+      <Height>1.10325in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="txt_ReportTitle">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!Title.Value</Value>
+                  <Style>
+                    <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetReportTitle")</FontStyle>
+                    <FontFamily>=First(Fields!FontName.Value, "StyleSheetReportTitle")</FontFamily>
+                    <FontSize>=First(Fields!FontSize.Value, "StyleSheetReportTitle")</FontSize>
+                    <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetReportTitle")</FontWeight>
+                    <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetReportTitle")</TextDecoration>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetReportTitle")</FontStyle>
+                <FontFamily>=First(Fields!FontName.Value, "StyleSheetReportTitle")</FontFamily>
+                <FontSize>=First(Fields!FontSize.Value, "StyleSheetReportTitle")</FontSize>
+                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetReportTitle")</FontWeight>
+                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetReportTitle")</TextDecoration>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Height>0.26056in</Height>
+          <Width>7.5in</Width>
+          <ToolTip>ReportTitle</ToolTip>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetReportTitle")</FontStyle>
+            <FontFamily>=First(Fields!FontName.Value, "StyleSheetReportTitle")</FontFamily>
+            <FontSize>=First(Fields!FontSize.Value, "StyleSheetReportTitle")</FontSize>
+            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetReportTitle")</FontWeight>
+            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetReportTitle")</TextDecoration>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="txt_PortName">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Code.GetPortfolioReportHeading(ReportItems!ReportHeading2.Value)</Value>
+                  <Style>
+                    <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetPortfolioName")</FontStyle>
+                    <FontFamily>=First(Fields!FontName.Value, "StyleSheetPortfolioName")</FontFamily>
+                    <FontSize>=First(Fields!FontSize.Value, "StyleSheetPortfolioName")</FontSize>
+                    <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetPortfolioName")</FontWeight>
+                    <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetPortfolioName")</TextDecoration>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetPortfolioName")</FontStyle>
+                <FontFamily>=First(Fields!FontName.Value, "StyleSheetPortfolioName")</FontFamily>
+                <FontSize>=First(Fields!FontSize.Value, "StyleSheetPortfolioName")</FontSize>
+                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetPortfolioName")</FontWeight>
+                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetPortfolioName")</TextDecoration>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.58444in</Top>
+          <Height>0.26395in</Height>
+          <Width>7.5in</Width>
+          <ZIndex>1</ZIndex>
+          <ToolTip>PortfolioName</ToolTip>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetPortfolioName")</FontStyle>
+            <FontFamily>=First(Fields!FontName.Value, "StyleSheetPortfolioName")</FontFamily>
+            <FontSize>=First(Fields!FontSize.Value, "StyleSheetPortfolioName")</FontSize>
+            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetPortfolioName")</FontWeight>
+            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetPortfolioName")</TextDecoration>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="txt_ReportDate">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!ToDate.Value</Value>
+                  <Style>
+                    <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetDate")</FontStyle>
+                    <FontFamily>=First(Fields!FontName.Value, "StyleSheetDate")</FontFamily>
+                    <FontSize>=First(Fields!FontSize.Value, "StyleSheetDate")</FontSize>
+                    <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetDate")</FontWeight>
+                    <Format>MMMM dd, yyyy</Format>
+                    <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetDate")</TextDecoration>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetDate")</FontStyle>
+                <FontFamily>=First(Fields!FontName.Value, "StyleSheetDate")</FontFamily>
+                <FontSize>=First(Fields!FontSize.Value, "StyleSheetDate")</FontSize>
+                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetDate")</FontWeight>
+                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetDate")</TextDecoration>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.84839in</Top>
+          <Height>0.24097in</Height>
+          <Width>7.5in</Width>
+          <ZIndex>2</ZIndex>
+          <ToolTip>Date</ToolTip>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetDate")</FontStyle>
+            <FontFamily>=First(Fields!FontName.Value, "StyleSheetDate")</FontFamily>
+            <FontSize>=First(Fields!FontSize.Value, "StyleSheetDate")</FontSize>
+            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetDate")</FontWeight>
+            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetDate")</TextDecoration>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="txt_Portfolios">
+          <CanShrink>true</CanShrink>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Code.GetPortfolioReportHeading(ReportItems!ReportHeading3.Value)</Value>
+                  <Style>
+                    <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetPortfolioName")</FontStyle>
+                    <FontFamily>=First(Fields!FontName.Value, "StyleSheetPortfolioName")</FontFamily>
+                    <FontSize>=First(Fields!FontSize.Value, "StyleSheetPortfolioName")</FontSize>
+                    <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetPortfolioName")</FontWeight>
+                    <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetPortfolioName")</TextDecoration>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetPortfolioName")</FontStyle>
+                <FontFamily>=First(Fields!FontName.Value, "StyleSheetPortfolioName")</FontFamily>
+                <FontSize>=First(Fields!FontSize.Value, "StyleSheetPortfolioName")</FontSize>
+                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetPortfolioName")</FontWeight>
+                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetPortfolioName")</TextDecoration>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.30223in</Top>
+          <Height>0.26973in</Height>
+          <Width>7.5in</Width>
+          <ZIndex>3</ZIndex>
+          <ToolTip>PortfolioName</ToolTip>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetPortfolioName")</FontStyle>
+            <FontFamily>=First(Fields!FontName.Value, "StyleSheetPortfolioName")</FontFamily>
+            <FontSize>=First(Fields!FontSize.Value, "StyleSheetPortfolioName")</FontSize>
+            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetPortfolioName")</FontWeight>
+            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetPortfolioName")</TextDecoration>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+        <BottomBorder>
+          <Color>Black</Color>
+          <Style>Solid</Style>
+          <Width>1pt</Width>
+        </BottomBorder>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>0.3182in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox4">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!Disclaimer.Value, "DisclaimerText")</Value>
+                  <Style>
+                    <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetFooter")</FontStyle>
+                    <FontFamily>=First(Fields!FontName.Value, "StyleSheetFooter")</FontFamily>
+                    <FontSize>=First(Fields!FontSize.Value, "StyleSheetFooter")</FontSize>
+                    <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetFooter")</FontWeight>
+                    <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetFooter")</TextDecoration>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetFooter")</FontStyle>
+                <FontFamily>=First(Fields!FontName.Value, "StyleSheetFooter")</FontFamily>
+                <FontSize>=First(Fields!FontSize.Value, "StyleSheetFooter")</FontSize>
+                <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetFooter")</FontWeight>
+                <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetFooter")</TextDecoration>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>0.04167in</Top>
+          <Height>0.27653in</Height>
+          <Width>7.5in</Width>
+          <ToolTip>Footer</ToolTip>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <FontStyle>=First(Fields!FontStyle.Value, "StyleSheetFooter")</FontStyle>
+            <FontFamily>=First(Fields!FontName.Value, "StyleSheetFooter")</FontFamily>
+            <FontSize>=First(Fields!FontSize.Value, "StyleSheetFooter")</FontSize>
+            <FontWeight>=First(Fields!FontWeight.Value, "StyleSheetFooter")</FontWeight>
+            <TextDecoration>=First(Fields!TextDecoration.Value, "StyleSheetFooter")</TextDecoration>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <LeftMargin>0.5in</LeftMargin>
+    <RightMargin>0.5in</RightMargin>
+    <TopMargin>0.5in</TopMargin>
+    <BottomMargin>0.5in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="APXFirm">
+      <DataSourceReference>APXFirm</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>1511b0c1-92d6-4c80-954f-c77aa4255e18</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Configuration">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>EXEC APXUser.pSessionInfoSetGuid @SessionGuid
+Select StyleSetID from Apxuser.vConfigurationEx</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="StyleSetID">
+          <DataField>StyleSetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="StyleSheets">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>EXEC APXUser.pSessionInfoSetGuid @SessionGuid
+exec APXUser.pGetStyleSheet</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="StyleSheetID">
+          <DataField>StyleSheetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DisplayName">
+          <DataField>DisplayName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="PortfoliosPerf">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Portfolios">
+            <Value>=Parameters!Portfolios.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@ToDate">
+            <Value>=Parameters!ToDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@TimeFrameList">
+            <Value>=Parameters!TimeFrameList.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@ClassificationID">
+            <Value>=Parameters!ClassificationID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@FirmLogo">
+            <Value>=Parameters!FirmLogo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>APXUserCustom.pB29883SA</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="DataHandle">
+          <DataField>DataHandle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PortfolioBaseID">
+          <DataField>PortfolioBaseID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PortfolioBaseIDOrder">
+          <DataField>PortfolioBaseIDOrder</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ReportDate">
+          <DataField>ReportDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="FromDate">
+          <DataField>FromDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ThruDate">
+          <DataField>ThruDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PortfolioBaseCode">
+          <DataField>PortfolioBaseCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportHeading1">
+          <DataField>ReportHeading1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportHeading2">
+          <DataField>ReportHeading2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportHeading3">
+          <DataField>ReportHeading3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FirmLogo">
+          <DataField>FirmLogo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GrpPortfolioName">
+          <DataField>GrpPortfolioName</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DisclaimerText">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Disclaimer">
+            <Value>=Parameters!Disclaimer.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>
+          EXEC APXUser.pSessionInfoSetGuid @SessionGuid=@SessionGuid
+          select APXUser.fGetDisclaimerText(@Disclaimer) as Disclaimer
+        </CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="Disclaimer">
+          <DataField>Disclaimer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Collation>Latin1_General</Collation>
+    </DataSet>
+    <DataSet Name="Disclaimers">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>
+          EXEC APXUser.pSessionInfoSetGuid @SessionGuid=@SessionGuid
+          exec APXUser.pGetDisclaimer
+        </CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="DisclaimerID">
+          <DataField>DisclaimerID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DisclaimerName">
+          <DataField>DisclaimerName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Collation>Latin1_General</Collation>
+    </DataSet>
+    <DataSet Name="Classification">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>exec APXUser.pSessionInfoSetGuid @SessionGuid = @SessionGuid
+exec APXUser.pGetReportingClassification</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ClassificationID">
+          <DataField>ClassificationID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ClassificationName">
+          <DataField>ClassificationName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="StyleSheetReportTitle">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSheet">
+            <Value>=Parameters!StyleSheet.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSetID">
+            <Value>=Parameters!StyleSetID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>exec APXUser.pSessionInfoSetGuid @SessionGuid Select * from APXUserCustom.vStyleSheet WHERE DisplayName = @StyleSheet and StyleSetID = @StyleSetID and ElementName = 'Report Title'</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="StyleSheetID">
+          <DataField>StyleSheetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="StyleSheetName">
+          <DataField>StyleSheetName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StyleSetID">
+          <DataField>StyleSetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DisplayName">
+          <DataField>DisplayName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowFootnotes">
+          <DataField>ShowFootnotes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PageWidthInches">
+          <DataField>PageWidthInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PageHeightInches">
+          <DataField>PageHeightInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TopMarginInches">
+          <DataField>TopMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BottomMarginInches">
+          <DataField>BottomMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="LeftMarginInches">
+          <DataField>LeftMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="RightMarginInches">
+          <DataField>RightMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ElementName">
+          <DataField>ElementName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontName">
+          <DataField>FontName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontSize">
+          <DataField>FontSize</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyleOriginal">
+          <DataField>FontStyleOriginal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontWeight">
+          <DataField>FontWeight</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyle">
+          <DataField>FontStyle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TextDecoration">
+          <DataField>TextDecoration</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="StyleSheetPortfolioName">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSheet">
+            <Value>=Parameters!StyleSheet.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSetID">
+            <Value>=Parameters!StyleSetID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>exec APXUser.pSessionInfoSetGuid @SessionGuid Select * from APXUserCustom.vStyleSheet WHERE DisplayName = @StyleSheet and StyleSetID = @StyleSetID and ElementName = 'Portfolio Name'</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="StyleSheetID">
+          <DataField>StyleSheetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="StyleSheetName">
+          <DataField>StyleSheetName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StyleSetID">
+          <DataField>StyleSetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DisplayName">
+          <DataField>DisplayName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowFootnotes">
+          <DataField>ShowFootnotes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PageWidthInches">
+          <DataField>PageWidthInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PageHeightInches">
+          <DataField>PageHeightInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TopMarginInches">
+          <DataField>TopMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BottomMarginInches">
+          <DataField>BottomMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="LeftMarginInches">
+          <DataField>LeftMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="RightMarginInches">
+          <DataField>RightMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ElementName">
+          <DataField>ElementName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontName">
+          <DataField>FontName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontSize">
+          <DataField>FontSize</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyleOriginal">
+          <DataField>FontStyleOriginal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontWeight">
+          <DataField>FontWeight</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyle">
+          <DataField>FontStyle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TextDecoration">
+          <DataField>TextDecoration</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="StyleSheetDate">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSheet">
+            <Value>=Parameters!StyleSheet.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSetID">
+            <Value>=Parameters!StyleSetID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>exec APXUser.pSessionInfoSetGuid @SessionGuid Select * from APXUserCustom.vStyleSheet WHERE DisplayName = @StyleSheet and StyleSetID = @StyleSetID and ElementName = 'Date'</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="StyleSheetID">
+          <DataField>StyleSheetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="StyleSheetName">
+          <DataField>StyleSheetName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StyleSetID">
+          <DataField>StyleSetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DisplayName">
+          <DataField>DisplayName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowFootnotes">
+          <DataField>ShowFootnotes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PageWidthInches">
+          <DataField>PageWidthInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PageHeightInches">
+          <DataField>PageHeightInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TopMarginInches">
+          <DataField>TopMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BottomMarginInches">
+          <DataField>BottomMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="LeftMarginInches">
+          <DataField>LeftMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="RightMarginInches">
+          <DataField>RightMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ElementName">
+          <DataField>ElementName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontName">
+          <DataField>FontName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontSize">
+          <DataField>FontSize</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyleOriginal">
+          <DataField>FontStyleOriginal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontWeight">
+          <DataField>FontWeight</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyle">
+          <DataField>FontStyle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TextDecoration">
+          <DataField>TextDecoration</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="StyleSheetFooter">
+      <Query>
+        <DataSourceName>APXFirm</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SessionGuid">
+            <Value>=Parameters!SessionGuid.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSheet">
+            <Value>=Parameters!StyleSheet.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@StyleSetID">
+            <Value>=Parameters!StyleSetID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>exec APXUser.pSessionInfoSetGuid @SessionGuid Select * from APXUserCustom.vStyleSheet WHERE DisplayName = @StyleSheet and StyleSetID = @StyleSetID and ElementName = 'Footer'</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="StyleSheetID">
+          <DataField>StyleSheetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="StyleSheetName">
+          <DataField>StyleSheetName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StyleSetID">
+          <DataField>StyleSetID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DisplayName">
+          <DataField>DisplayName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowFootnotes">
+          <DataField>ShowFootnotes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PageWidthInches">
+          <DataField>PageWidthInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PageHeightInches">
+          <DataField>PageHeightInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TopMarginInches">
+          <DataField>TopMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BottomMarginInches">
+          <DataField>BottomMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="LeftMarginInches">
+          <DataField>LeftMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="RightMarginInches">
+          <DataField>RightMarginInches</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ElementName">
+          <DataField>ElementName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontName">
+          <DataField>FontName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontSize">
+          <DataField>FontSize</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyleOriginal">
+          <DataField>FontStyleOriginal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontWeight">
+          <DataField>FontWeight</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FontStyle">
+          <DataField>FontStyle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TextDecoration">
+          <DataField>TextDecoration</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="SessionGuid">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>SessionGuid</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="Portfolios">
+      <DataType>String</DataType>
+      <Prompt>Portfolios</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ToDate">
+      <DataType>DateTime</DataType>
+      <Prompt>Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TimeFrame">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>QTD</Value>
+          <Value>L1Y</Value>
+          <Value>ITD</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Time Frame</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>QTD</Value>
+            <Label>Quarter To Date</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>L1Y</Value>
+            <Label>Latest 1 Year</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>ITD</Value>
+            <Label>Inception To Date</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="ClassificationID">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>-9</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Performance</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>Classification</DataSetName>
+          <ValueField>ClassificationID</ValueField>
+          <LabelField>ClassificationName</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="Title">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>QUARTERLY REPORT</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Title</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BMV">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>BMV Label</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Frequency">
+      <DataType>String</DataType>
+      <Prompt>Frequency</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>monthly</Value>
+            <Label>Monthly</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Quarterly</Value>
+            <Label>Quarterly</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Semi-Annual</Value>
+            <Label>Semi-Annual</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Annual</Value>
+            <Label>Annual</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SuppressLastChart">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SuppressLastChart</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="StyleSheet">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Default A</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>StyleSheet</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>StyleSheets</DataSetName>
+          <ValueField>DisplayName</ValueField>
+          <LabelField>DisplayName</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="StyleSetID">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>Configuration</DataSetName>
+          <ValueField>StyleSetID</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>StyleSetID</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="TimeFrameList">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=Join(Parameters!TimeFrame.Value,",") &amp; ","</Value>
+        </Values>
+      </DefaultValue>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="Disclaimer">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>0</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disclaimer</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>Disclaimers</DataSetName>
+          <ValueField>DisclaimerID</ValueField>
+          <LabelField>DisclaimerName</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="FirmLogo">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>FirmLogo Label</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Private cFirmLogo as Object
+Private PortfolioHeading as Object
+Private GroupPortfolioHeading as Object
+
+Protected Overrides Sub OnInit() 
+  cFirmLogo = nothing
+  PortfolioHeading = nothing
+  GroupPortfolioHeading= nothing
+End Sub
+
+Public Function GetFirmLogo( FirmLogo as Object) as String
+if FirmLogo is nothing
+   return cFirmLogo
+else 
+   cFirmLogo = FirmLogo 
+   return cFirmLogo 
+end if
+End Function
+
+Public Function GetPortfolioReportHeading(PortReportHeading as Object) as String
+if PortReportHeading is nothing
+   return PortfolioHeading 
+else 
+   PortfolioHeading = PortReportHeading
+   return PortfolioHeading 
+end if
+End Function
+
+Public Function GetGroupPortfolioReportHeading(GrpReportHeading as Object) as String
+if GrpReportHeading is nothing
+   return GroupPortfolioHeading
+else 
+   GroupPortfolioHeading = GrpReportHeading
+   return GroupPortfolioHeading
+end if
+End Function</Code>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>f51d5b23-e039-4ca5-81d4-7ec5ad6886cc</rd:ReportID>
+</Report>
