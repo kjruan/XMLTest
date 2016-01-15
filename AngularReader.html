@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-animate.js"></script>
+	<script src="http://demos.amitavroy.com/learningci/assets/js/xml2json.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+	<script>
+	var myapp = angular.module('myapp', []);
+
+	myapp.controller('MainCtrl', function ($scope) {
+
+	    var getDataSetCommandText = function (rdl) {
+			var datasets = rdl.Report.DataSets.DataSet;
+			var output = datasets.map(function (dataset) {
+				var set = { name: dataset._Name, sprocs: null };
+				var name = dataset._Name;
+				//console.log(dataset.Query.CommandText.replace(/["'\[\]]/g,''));
+				set.sprocs = getSpecifcAPXFunctions(dataset.Query.CommandText.replace(/["'\[\]]/g,'').replace('null', ''));
+				return set;
+			})
+			return output;
+		}
+
+		var getSpecifcAPXFunctions = function (query) {
+			var regex = /APXUser(.\w+)(.\w+?\b)/gi;
+			var output = query.match(regex);
+			return output;
+		}
+
+		var analyzeDataSet = function (collection, callback) {
+			for (var i = 0; i < collection.length; i++) {
+				callback(collection[i]);
+			}
+		}
+
+	    $scope.showContent = function($fileContent){
+	    	content = x2js.xml_str2json($fileContent);
+	    	//console.log(content);
+	        $scope.content = getDataSetCommandText(content);
+	    };
+	  });
+
+	myapp.directive('onReadFile', function ($parse) {
+		return {
+			restrict: 'A',
+			scope: false,
+			link: function(scope, element, attrs) {
+	            var fn = $parse(attrs.onReadFile);
+	            
+				element.on('change', function(onChangeEvent) {
+					var reader = new FileReader();
+	                
+					reader.onload = function(onLoadEvent) {
+						scope.$apply(function() {
+							fn(scope, { $fileContent: onLoadEvent.target.result });
+						});
+					};
+
+					reader.readAsText((onChangeEvent.srcElement || onChangeEvent.target).files[0]);
+				});
+			}
+		};
+	});
+	</script>
+</head>
+<body>
+<div ng-controller="MainCtrl" class="container">
+  <h1>Select text file</h1>
+    <input type="file" on-read-file="showContent($fileContent)" />
+    <div ng-if="content">
+        <h2>File content is:</h2>
+        <pre>
+        	<p ng-repeat="item in content">{{ item.name }} <br> <span ng-repeat="sp in item.sprocs">{{ sp }} <br> </span></p>
+        </pre>
+    </div>
+</div>
+</body>
+</html>

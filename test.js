@@ -23,7 +23,7 @@ var getSpecifcAPXFunctions = function (query) {
 	return output
 }
 
-function print(item) {
+function print(collection) {
 	for (var i in item) {
 		console.log(i + " " + item[i]);
 	}
