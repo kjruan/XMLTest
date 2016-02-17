@@ -4,7 +4,7 @@ from xml.dom import minidom
 def GetReportObjectAttrs(node):
 	objSet = {}
 	for c in node.childNodes:
-		if (c.nodeType == 1 and c.tagName == 'DataSetName'):
+		if (c.nodeType == 1 and c.tagName == 'DataSetName'): # note type 1 = element
 			objSet["DataSet"] = c.firstChild.data
 	objSet["Type"] = node.localName
 	objSet["Name"] = node.attributes['Name'].value
@@ -22,6 +22,7 @@ pattern = re.compile(r"APXUser[.\w]+", re.IGNORECASE)
 
 rdl = {}
 datasetObj = {}
+datasetFields = []
 paramList = []
 objList = []
 objSetArray = []
@@ -44,9 +45,18 @@ for parameter in parameters:
 for dataset in datasets:
 	dsName = dataset.attributes['Name'].value	
 	query = dataset.getElementsByTagName('Query')
+	fields = dataset.getElementsByTagName('Fields')
+
+	datasetObj[dsName] = {}
+	for field in fields:
+		datasetObj[dsName]["Fields"] = []
+		for f in field.childNodes:
+			if (f.nodeType == 1): # note type 1 = element
+				datasetObj[dsName]["Fields"].append(f.attributes['Name'].value)
+
 	for node in query:
 		commandText = node.getElementsByTagName('CommandText').item(0).firstChild.data
-		datasetObj[dsName] = list(set(re.findall(pattern, commandText)))
+		datasetObj[dsName]["StoredProcedures"] = list(set(re.findall(pattern, commandText)))
 
 #Get Report Object Fields 
 # for obj in objList:
@@ -57,8 +67,8 @@ for dataset in datasets:
 # 				obj["Fields"].append(field.attributes['Name'].value)
 
 rdl["FileName"] = 'Test'
-rdl["DateCreated"] = 'Test'
-rdl["LastUpdated"] = 'Test'
+rdl["DateCreated"] = '1/1/2015'
+rdl["LastUpdated"] = '1/1/2015'
 rdl["ReportOjects"] = objList
 rdl["Parameters"] = paramList
 rdl["DataSets"] = datasetObj
