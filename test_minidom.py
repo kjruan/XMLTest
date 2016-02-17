@@ -21,7 +21,7 @@ datasets = xmldoc.getElementsByTagName('DataSet')
 pattern = re.compile(r"APXUser[.\w]+", re.IGNORECASE)
 
 rdl = {}
-datasetObj = {}
+datasetObjs = {}
 datasetFields = []
 paramList = []
 objList = []
@@ -47,16 +47,16 @@ for dataset in datasets:
 	query = dataset.getElementsByTagName('Query')
 	fields = dataset.getElementsByTagName('Fields')
 
-	datasetObj[dsName] = {}
+	datasetObjs[dsName] = {}
 	for field in fields:
-		datasetObj[dsName]["Fields"] = []
+		datasetObjs[dsName]["Fields"] = []
 		for f in field.childNodes:
 			if (f.nodeType == 1): # note type 1 = element
-				datasetObj[dsName]["Fields"].append(f.attributes['Name'].value)
+				datasetObjs[dsName]["Fields"].append(f.attributes['Name'].value)
 
 	for node in query:
 		commandText = node.getElementsByTagName('CommandText').item(0).firstChild.data
-		datasetObj[dsName]["StoredProcedures"] = list(set(re.findall(pattern, commandText)))
+		datasetObjs[dsName]["StoredProcedures"] = list(set(re.findall(pattern, commandText)))
 
 #Get Report Object Fields 
 # for obj in objList:
@@ -71,7 +71,7 @@ rdl["DateCreated"] = '1/1/2015'
 rdl["LastUpdated"] = '1/1/2015'
 rdl["ReportOjects"] = objList
 rdl["Parameters"] = paramList
-rdl["DataSets"] = datasetObj
+rdl["DataSets"] = datasetObjs
 rdl["TotalHours"] = 0
 
 data_string = json.dumps(rdl, indent=4)
