@@ -1,23 +1,22 @@
-import xml.etree.ElementTree as ET
+import os, time, pymongo
+from RDLParser import RDLParser
+from pymongo import MongoClient
 
-tree = ET.parse('B29883SA.rdl')
-root = tree.getroot()
+client = MongoClient('localhost', 27017)
+db = client['rdltest']
+collection = db['rdls']
 
-ns = {'report_definition': 'http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition',
-			'report_design': 'http://schemas.microsoft.com/SQLServer/reporting/reportdesigner'}
+# fileName = 'B29883SASubreport.rdl'
+# output = RDLParser(fileName).GetOuputfromRDL()
+# rdls_id = collection.insert_one(output).inserted_id
 
-for datasets in root.findall('.//report_definition:DataSet', ns):
-	print(datasets.attrib['Name'])
-	for dataset in datasets:
-		queries = dataset.findall('report_definition:Query', ns)
-		print(queries)
 
-# for child in root:
-# 	for c in child:
-# 		if c.tag == '{http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition}DataSet':
-# 			print(c.attrib['Name'])
-# 			queries = c.findall('{http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition}Query')
-# 			for query in queries:
-# 				for elem in query:
-# 					if elem.tag == '{http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition}CommandText':
-# 						print(elem.text)
+for dirpath, dirs, files in os.walk("C:\Test\XMLTest\Client"):
+	for file in files:
+		if file.endswith(".rdl"):
+			info = os.stat(dirpath)
+			# print(os.path.abspath(os.path.join(dirpath, file)))
+			# print(time.strftime(file + " Modified Date: %m/%d/%y", time.localtime(info.st_mtime)))
+
+			output = RDLParser(os.path.abspath(os.path.join(dirpath, file))).GetOuputfromRDL()
+			collection.insert_one(output)

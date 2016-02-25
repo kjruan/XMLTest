@@ -1,9 +1,10 @@
-import re, json
+import re, json, os, time
 from xml.dom import minidom
 
 class RDLParser(object):
 	'Common base class for RDL to JSON parsing'
 	def __init__(self, rdl):
+		self.fileAttrs = self.GetFileAttrs(rdl)
 		self.xmldoc = minidom.parse(rdl)
 		self.repItems = self.xmldoc.getElementsByTagName('ReportItems')
 		self.parameters = self.xmldoc.getElementsByTagName('ReportParameter')
@@ -47,16 +48,16 @@ class RDLParser(object):
 				datasetObjs[dsName]["StoredProcedures"] = list(set(re.findall(self.pattern, commandText)))
 		return datasetObjs
 
-	def GetJSONfromRDL(self):
+	def GetOuputfromRDL(self, fileType=None):
 		rdl = {}
-		rdl["FileName"] = 'Test'
-		rdl["DateCreated"] = '1/1/2015'
-		rdl["LastUpdated"] = '1/1/2015'
+		rdl["FileName"] = self.fileAttrs["Name"]
+		rdl["DateCreated"] = self.fileAttrs["DateCreated"]
+		rdl["LastUpdated"] = self.fileAttrs["LastUpdated"]
 		rdl["ReportOjects"] = self.GetReportObject()
 		rdl["Parameters"] = self.GetReportParameters()
 		rdl["DataSets"] = self.GetDatasetAttributes()
 		rdl["TotalHours"] = 0
-		return json.dumps(rdl, indent=4)
+		return json.dumps(rdl, indent=4) if fileType == "json" else rdl
 
 	@staticmethod
 	def GetReportObjectAttrs(node):
@@ -68,9 +69,13 @@ class RDLParser(object):
 		objSet["Name"] = node.attributes['Name'].value
 		return objSet
 
-fileName = 'B29883SASubreport.rdl'
-output = RDLParser(fileName)
-
-print(output.GetJSONfromRDL())
+	@staticmethod 
+	def GetFileAttrs(filePath):
+		obj = {}
+		info = os.stat(filePath)
+		obj["Name"] = os.path.split(filePath)[1] #tail
+		obj["LastUpdated"] = time.strftime("%m/%d/%y", time.localtime(info.st_ctime))
+		obj["DateCreated"] = time.strftime("%m/%d/%y", time.localtime(info.st_mtime))
+		return obj
 
 
