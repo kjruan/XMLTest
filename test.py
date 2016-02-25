@@ -20,3 +20,5 @@ for dirpath, dirs, files in os.walk("C:\Test\XMLTest\Client"):
 
 			output = RDLParser(os.path.abspath(os.path.join(dirpath, file))).GetOuputfromRDL()
 			collection.insert_one(output)
+
+

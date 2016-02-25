@@ -50,7 +50,7 @@ class RDLParser(object):
 
 	def GetOuputfromRDL(self, fileType=None):
 		rdl = {}
-		rdl["FileName"] = self.fileAttrs["Name"]
+		rdl["FileName"] = self.fileAttrs["Name"].replace(".rdl","")
 		rdl["DateCreated"] = self.fileAttrs["DateCreated"]
 		rdl["LastUpdated"] = self.fileAttrs["LastUpdated"]
 		rdl["ReportOjects"] = self.GetReportObject()
